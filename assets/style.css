@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Inter:wght@400;700&display=swap');
+
+:root {
+    --neon-purple: #008080;
+    --gold: #fafafa;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
+    background-color: #0d0d12;
+    background-image:
+        /* Subtle star field and nebulae effects */
+        radial-gradient(ellipse at 80% 80%, rgba(26, 26, 46, 0.6) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 20%, rgba(42, 42, 78, 0.6) 0%, transparent 50%),
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        /* LoL-style pattern with animated glow */
+        url('./BG.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header-font {
+    font-family: 'Metal Mania', cursive;
+}
+.text-neon-purple { color: var(--neon-purple); }
+.bg-gradient-purple-gold {
+    background-image: linear-gradient(to right, var(--neon-purple), var(--gold));
+}
+.neon-glow {
+    box-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple), 0 0 40px var(--neon-purple);
+    animation: pulse-glow 3s infinite alternate;
+}
+.player-card {
+    background-color: #1a1a2e;
+    border: 1px solid #2a2a4e;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--neon-purple), 0 0 25px var(--neon-purple);
+}
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
+    }
+    100% {
+        box-shadow: 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple), 0 0 40px var(--neon-purple);
+    }
+}
+
+.neon-purple {
+    color: #008080; /* A vibrant, eye-catching purple */
+}
+.bg-gradient-purple-gold {
+    background-image: linear-gradient(135deg, #008080, #f7f7f7);
+}
+.neon-glow {
+    box-shadow: 0 0 5px #f3f3f3, 0 0 10px #f3f3f3, 0 0 15px #f2f2f2, 0 0 20px #f4f4f4;
+}
